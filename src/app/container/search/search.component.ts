@@ -16,8 +16,8 @@ export class SearchComponent {
   @Output()
   searchTextChange:EventEmitter<string>=new EventEmitter<string>();
 
-  onSearchTextChange(){
-  };
+  // onSearchTextChange(){
+  // };
 
   updateSearchtext(inputEl:HTMLInputElement){
      this.searchText = inputEl.value;
