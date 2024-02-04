@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SearchComponent } from './search/search.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CommonModule } from '@angular/common';
@@ -13,6 +13,12 @@ import { CommonModule } from '@angular/common';
 })
 export class ContainerComponent {
   listOfString:string[]=["nikolay","mark","bimbim"]
+
+  searchText:string='';
+
+  setSearchText(event:string){
+    this.searchText=event;
+  };
   
 
 }

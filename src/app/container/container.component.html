@@ -12,11 +12,11 @@
     <!-- <input (input)="onNameCharge($event)">
     <br>
     <p>name={{name}}</p>    -->
-    <app-search></app-search>
+    <app-search (searchTextChange)="setSearchText($event)"></app-search>
     <!-- <div *ngFor="let item of listOfString">
         <p>current elem:{{item}}</p>
     </div> -->
-    <product-list></product-list>
+    <product-list [searchText]="searchText"></product-list>
 </div>
 
 <!-- disabled,hidden,checked -->
