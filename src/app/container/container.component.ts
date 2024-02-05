@@ -1,8 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { SearchComponent } from './search/search.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CommonModule } from '@angular/common';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { Product } from '../Models/Product';
 
 
 @Component({
@@ -16,6 +17,8 @@ export class ContainerComponent {
   listOfString:string[]=["nikolay","mark","bimbim"]
 
   searchText:string='';
+
+  @ViewChild('product-list') productListComponent : ProductListComponent;
 
   setSearchText(event:string){
     this.searchText=event;
